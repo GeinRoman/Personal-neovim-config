@@ -11,6 +11,16 @@ opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 
+opt.swapfile = false
+opt.backup = false
+--if next line is not working check whether or not print(os.getenv("OS")) prints "Windows_NT"
+if os.getenv("OS") == "Windows_NT" then
+    opt.undodir = os.getenv("UserProfile").."/.vim/undodir"
+else
+    opt.undodir = os.getenv("HOME").."/.vim/undodir"
+end
+opt.undofile = true
+
 opt.hlsearch = true
 opt.incsearch = true
 
