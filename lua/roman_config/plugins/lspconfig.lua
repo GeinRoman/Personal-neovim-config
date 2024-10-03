@@ -7,15 +7,6 @@ return {
         --{ "folke/neodev.nvim", opts = {} },
     },
 
-    --this is suppose to prevent conflicts between lspconfig rust_analyzer and rustaceanvim
-    --opts = {
-    --  setup = {
-    --    rust_analyzer = function()
-    --            return true
-    --        end,
-    --    },
-    --},
-
     config = function()
         -- import lspconfig plugin
         local lspconfig = require("lspconfig")
